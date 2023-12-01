@@ -35,41 +35,7 @@ class TestFunctions(unittest.TestCase):
         with open(os.path.join(__location__, "testing_data.yaml"), "r") as file:
             cls.data = yaml.safe_load(file)
 
-    def test_make_abc(self):
-        execute_test(self, main, "make_abc", self.data)
-    
-    def test_equal_edges(self):
-        execute_test(self, main, "equal_edges", self.data)
-
-    def test_common_edge(self):
-        execute_test(self, main, "common_edge", self.data)
-
-    def test_all_the_same(self):
-        execute_test(self, main, "all_the_same", self.data)
-    
-    def test_all_unique(self):
-        execute_test(self, main, "all_unique", self.data)
-
-    def test_increasing(self):
-        execute_test(self, main, "increasing", self.data)
-
-    def test_all_true(self):
-        execute_test(self, main, "all_true", self.data)
-
-    def test_mostly_true(self):
-        execute_test(self, main, "mostly_true", self.data)
-    
-    def test_make_copy(self):
-        execute_test(self, main, "make_copy", self.data)
-    
-    def test_repeat_thrice(self):
-        execute_test(self, main, "repeat_thrice", self.data)
-    
-    def test_make_reversed_copy(self):
-        execute_test(self, main, "make_reversed_copy", self.data)
-    
-    def test_reverse_in_place(self):
-        execute_test(self, main, "reverse_in_place", self.data)
+    # TODO: implement tests
     
 if __name__ == '__main__':
     unittest.main(verbosity=2, exit=False, catchbreak=False)

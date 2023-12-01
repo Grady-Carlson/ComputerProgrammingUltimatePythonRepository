@@ -1,57 +1,54 @@
-def make_pi():
-    result = [3, 1, 4]
-    return result
+def count_vowels(letters):
+    count = 0
+    for letter in letters:
+        # if letter == "a" or letter == "e" or letter == "i" or letter == "o" or letter == "u":
+        if letter in ["a", "e", "i", "o", "u"]:
+            count = count + 1
+    
+    return count
 
-print("Demonstrate make pi:")
-print(make_pi())
+inputlist = ["a", "b", "c", "d", "e"]
+returnValue = count_vowels(inputlist)
+print(returnValue)
 
-def edges_sum(items):
-    first = items[0]
-    last = items[-1]
-    result = first + last
-    return result
+def number_product(numbers):
+    total = 1
+    for number in numbers:
+        total = total * number
+    
+    return total
 
-print("Demonstrate edges_sum")
-print("[1, 2, 3, 11] -> ", edges_sum([1, 2, 3, 11]))
+inputlist = [3, 2, 5]
+returnValue = number_product(inputlist)
+print(returnValue)
 
-def are_reversed(list1, list2):
-    # first1, middle1, last1 = list1
-    first1 = list1[0]
-    first2 = list2[0]
-    middle1 = list1[1]
-    middle2 = list2[1]
-    last1 = list1[2]
-    last2 = list2[2]
+def number_mean(numbers):
+    total = 0
+    # count = 0
+    for number in numbers: 
+        total = total + number
+        # count = count + 1
+    
+    # total is the sum of the numbers
+    return total / len(numbers)
 
-    if first1 == last2 and middle1 == middle2 and last1 == first2:
-        return True
-    else: 
-        return False
+inputlist = [2, 5, 9, 11]
+result = number_mean(inputlist)
+print(result)
 
-print("Demonstrate are_reversed")
-print("[1, 2, 4] & [3, 2, 1] -> ", are_reversed([1, 2, 4], [3, 2, 1]))
+def all_vowels(letters):
+    # # using previous function
+    # number_of_vowels = count_vowels(letters)
+    # if number_of_vowels == len(letters):
+    #     return True
+    # else:
+    #     return False
 
-def make_repeated_max(items):
-    maxvalue = max(items)
-    return [maxvalue, maxvalue, maxvalue]
+    # from scratch (faster to execute)
+    for letter in letters:
+        if letter not in ["a", "e", "i", "o", "u"]:
+            return False
+    return True
 
-print("Demonstrate make_repeated_max")
-original_list = [3, 5, 1]
-new_list = make_repeated_max(original_list)
-print("original list: ", original_list)
-print("new list: ", new_list)
-
-
-def overwrite_with_max(items):
-    maxvalue = max(items)
-    items[0] = maxvalue
-    items[1] = maxvalue
-    items[2] = maxvalue
-
-    return items
-
-print("Demonstrate overwrite_with_max")
-original_list = [3, 5, 1]
-new_list = overwrite_with_max(original_list)
-print("original list: ", original_list)
-print("new list: ", new_list)
+print(all_vowels(["a", "e", "a", "i", "u", "o"]))
+print(all_vowels(["a", "e", "s", "i", "u", "o"]))
