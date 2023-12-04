@@ -34,8 +34,11 @@ def average_act_score(scores):
     numberOfScores = 0
     sum = 0
     for score in scores:
-        numberOfScores = numberOfScores + 1
-        sum = sum + score
+        if 0<score<=36:
+             numberOfScores = numberOfScores + 1
+             sum = sum + score
+    if numberOfScores == 0:
+        return None
     return sum/numberOfScores
 
 print("Average ACT Scores:")
