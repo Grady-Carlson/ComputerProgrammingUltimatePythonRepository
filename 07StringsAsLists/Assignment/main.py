@@ -122,7 +122,7 @@ print("To Snake Case:")
 print("Grady Carlson is cool =>", to_snake_case("Grady Carlson is cool"))
 print("")
 
-def without_duplications(numbers):
+def without_duplicates(numbers):
     same = ""
     result = []
     for number in numbers:
@@ -133,8 +133,8 @@ def without_duplications(numbers):
             same = number
     return result
 
-print("Without Duplications:")
-print("122345677778899 =>", without_duplications([1,2,2,3,4,5,6,7,7,7,7,8,8,9,9]))
+print("Without Duplicates:")
+print("122345677778899 =>", without_duplicates([1,2,2,3,4,5,6,7,7,7,7,8,8,9,9]))
 print("")
 
 def filter_valid_act_scores(scores):
