@@ -10,7 +10,7 @@ print("Number Guesser:")
 while correct == False:
     print("Guess a the random Number 1-10:")
     checker2 = input()
-    if checker2 in ("12345678910"):
+    if checker2 in ("12345678910") and checker2 != "":
         guess = int(checker2)
         if guess == number:
             correct = True
@@ -32,7 +32,7 @@ while correct2 == False:
         print("You have",lives, "lives left.")
         print("Guess a the random Number 1-10:")
         checker = input()
-        if checker in ("12345678910"):
+        if checker in ("12345678910") and checker != "":
             guess2 = int(checker)
             if guess2 == number2:
                 correct2 = True
@@ -57,7 +57,7 @@ print("You owe 50 cents, insert coins to pay")
 while amount < 50:
     print("Insert Coin")
     checker = input()
-    if checker in ("25", "10", "5"):
+    if checker in ("25", "10", "5") and checker != "10":
         coin = int(checker)
         if coin == 25:
             amount = amount + 25
